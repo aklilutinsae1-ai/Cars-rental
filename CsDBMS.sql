@@ -10,21 +10,21 @@ CREATE TABLE customers (
 -- Cars
 CREATE TABLE cars (
     car_id SERIAL PRIMARY KEY,
-    brand VARCHAR(50) ,
+    brand VARCHAR(50) NOT NULL,
     model VARCHAR(50) ,
     year INT ,
-    price_per_day DECIMAL(10,2),
+    price_per_day DECIMAL(10,2) NOT NULL,
     status VARCHAR(20) 'available' CHECK (status IN ('available','rented','maintenance')),
 );
 
 -- Rentals
 CREATE TABLE rentals (
     rental_id SERIAL PRIMARY KEY,
-    customer_id INT ,
-    car_id INT ,
+    customer_id INT NOT NULL,
+    car_id INT NOT NULL,
     rent_date  ,
     return_date ,
-    total_amount DECIMAL(10,2) ,
+    total_amount DECIMAL(10,2) NOT NULL,
     CHECK (return_date > rent_date),
 
     -- Foreign Keys
