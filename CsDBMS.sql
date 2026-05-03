@@ -70,11 +70,6 @@ INSERT INTO cars (brand, model, year, price_per_day) VALUES
 ('Hyundai', 'Elantra', 2019, 2000.00);
 
 
--- Rental 1: customer 1 rents car 1 from 2026-04-01 to 2026-04-05 (4 days)
--- Rental 2: customer 2 rents car 3 from 2026-03-10 to 2026-03-12 (2 days)
--- Rental 3: customer 3 rents car 5 from 2026-02-01 to 2026-02-03 (2 days)
--- Rental 4: customer 4 rents car 4 from 2026-04-10 to 2026-04-12 (2 days)
-
 INSERT INTO rentals (customer_id, car_id, rent_date, return_date, total_amount) VALUES
 (1, 1, '2026-04-01', '2026-04-05', 28000.00),
 (2, 3, '2026-03-10', '2026-03-12', 6400.00),
