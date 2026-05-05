@@ -45,7 +45,8 @@ CREATE TABLE payments (
     rental_id INT ,
     payment_date DATE,
     amount DECIMAL(10,2) ,
-    payment_method VARCHAR(50) ,
+    payment_method VARCHAR(50) ,   CHECK (
+      payment_method IN ('Cash', 'Credit Card', 'Debit Card', 'Mobile')),
 
       -- Foreign Key
     CONSTRAINT fk_rental
